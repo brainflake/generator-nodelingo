@@ -1,5 +1,9 @@
 {
-  "name": "package",
+  "name": "<%= appName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "express": "3.1.0",
+    "jade": "*",
+    "stylus": "*"
+  }
 }
