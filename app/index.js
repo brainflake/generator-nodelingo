@@ -36,7 +36,9 @@ NlexpressGenerator.prototype.askFor = function askFor() {
 
 NlexpressGenerator.prototype.app = function app() {
   this.mkdir('app');
+  this.mkdir('public');
 
+  this.copy('Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
 };
