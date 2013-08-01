@@ -25,10 +25,28 @@ NlexpressGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     name: 'appName',
     message: 'What would you like to name your app?'
+  }, {
+    type: 'confirm',
+    name: 'mongo',
+    message: 'Include mongodb?',
+    default: true
+  }, {
+    type: 'confirm',
+    name: 'redis',
+    message: 'Include redis?',
+    default: true
+  }, {
+    type: 'confirm',
+    name: 'socketIO',
+    message: 'Include socket.io?',
+    default: true
   }];
 
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
+    this.mongo = props.mongo;
+    this.redis = props.redis;
+    this.socketIO = props.socketIO;
 
     cb();
   }.bind(this));
