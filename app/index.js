@@ -55,7 +55,15 @@ NlexpressGenerator.prototype.askFor = function askFor() {
 NlexpressGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('public');
+  this.mkdir('config');
+  this.mkdir('config/environments')
 
+  this.copy('config/environment.js', 'config/environment.js');
+  this.copy('config/environments/development.js', 'config/environments/development.js');
+  this.copy('config/environments/production.js', 'config/environments/production.js');
+  this.copy('config/index.js', 'config/index.js');
+
+  this.copy('server.js', 'server.js');
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
