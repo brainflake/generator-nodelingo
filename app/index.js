@@ -30,17 +30,11 @@ NlexpressGenerator.prototype.askFor = function askFor() {
     name: 'mongoose',
     message: 'Include mongoose?',
     default: true
-  }, {
-    type: 'confirm',
-    name: 'socketIO',
-    message: 'Include socket.io?',
-    default: true
   }];
 
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
     this.mongoose = props.mongoose;
-    this.socketIO = props.socketIO;
 
     cb();
   }.bind(this));

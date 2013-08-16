@@ -7,7 +7,7 @@
     "grunt-contrib-copy": "latest",
     "jade": "*",
     <% if (mongoose) { %>"mongoose": "~3.6",<% } %>
-    <% if (socketIO) { %>"socket.io": "*",<% } %>
+    "socket.io": "*",
     "stylus": "*",
     "underscore": "1.3.3",
     "underscore.string": "2.3.0"
