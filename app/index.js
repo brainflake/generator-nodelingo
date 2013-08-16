@@ -32,11 +32,6 @@ NlexpressGenerator.prototype.askFor = function askFor() {
     default: true
   }, {
     type: 'confirm',
-    name: 'redis',
-    message: 'Include redis?',
-    default: true
-  }, {
-    type: 'confirm',
     name: 'socketIO',
     message: 'Include socket.io?',
     default: true
@@ -45,7 +40,6 @@ NlexpressGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
     this.mongoose = props.mongoose;
-    this.redis = props.redis;
     this.socketIO = props.socketIO;
 
     cb();
