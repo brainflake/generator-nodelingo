@@ -1,9 +1,11 @@
 /*
  * Nested Keys will get concated with an underscore, so the examples below will be accessible by:
  *
- * app.get('amazon_key') and app.get('amazon_secret')
+ * app.get('mongodb_uri') and app.get('redis')
  */
 module.exports = {
-  mongodb: 'mongodb://localhost/database',
+  mongodb: {
+    uri: 'mongodb://localhost/database'
+  },
   redis: 'localhost'
 }
