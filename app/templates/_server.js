@@ -20,6 +20,8 @@ if ('development' == app.get('env')) {
 
 require('./config/routes')(app)
 
+<% if (mongoose) { %>require('./app/models')(app)<% } %>
+
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'))
 })

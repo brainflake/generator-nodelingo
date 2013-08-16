@@ -74,7 +74,7 @@ NlexpressGenerator.prototype.app = function app() {
   this.copy('config/environments/production.js', 'config/environments/production.js');
   this.copy('config/index.js', 'config/index.js');
 
-  this.copy('server.js', 'server.js');
+  this.template('_server.js', 'server.js');
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
