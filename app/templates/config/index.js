@@ -28,18 +28,18 @@ function flattenKeys(obj, keyPrefix) {
 module.exports = function(app) {
   app.set('port', process.env.PORT || 3000)
 
-  _.each(flattenKeys(env), function(key, val) {
+  _.each(flattenKeys(env), function(val, key) {
     app.set(key, val)
   })
 
   if ('development' == app.get('env')) {
-    _.each(flattenKeys(devEnvironment), function(key, val) {
+    _.each(flattenKeys(devEnvironment), function(val, key) {
       app.set(key, val)
     })
   }
 
   if ('production' == app.get('env')) {
-    _.each(flattenKeys(prodEnvironment), function(key, val) {
+    _.each(flattenKeys(prodEnvironment), function(val, key) {
       app.set(key, val)
     })
   }
