@@ -6,7 +6,7 @@
     "grunt": "latest",
     "grunt-contrib-copy": "latest",
     "jade": "*",
-    <% if (mongo) { %>"mongodb": "0.9.9-4",<% } %>
+    <% if (mongoose) { %>"mongoose": "~3.6",<% } %>
     <% if (redis) { %>"redis": "0.7.2",<% } %>
     <% if (socketIO) { %>"socket.io": "*",<% } %>
     "stylus": "*",

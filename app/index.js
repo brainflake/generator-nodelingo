@@ -27,8 +27,8 @@ NlexpressGenerator.prototype.askFor = function askFor() {
     message: 'What would you like to name your app?'
   }, {
     type: 'confirm',
-    name: 'mongo',
-    message: 'Include mongodb?',
+    name: 'mongoose',
+    message: 'Include mongoose?',
     default: true
   }, {
     type: 'confirm',
@@ -44,7 +44,7 @@ NlexpressGenerator.prototype.askFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
-    this.mongo = props.mongo;
+    this.mongoose = props.mongoose;
     this.redis = props.redis;
     this.socketIO = props.socketIO;
 
