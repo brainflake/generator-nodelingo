@@ -42,13 +42,13 @@ NlexpressGenerator.prototype.askFor = function askFor() {
 
 NlexpressGenerator.prototype.app = function app() {
   this.mkdir('app');
-  this.mkdir('app/controllers');
 
   if (this.mongoose) {
     this.mkdir('app/models');
     this.copy('app/models/index.js', 'app/models/index.js');
   }
 
+  this.mkdir('app/controllers');
   this.copy('app/controllers/index.js', 'app/controllers/index.js');
   this.copy('app/controllers/root_controller.js', 'app/controllers/root_controller.js');
 
