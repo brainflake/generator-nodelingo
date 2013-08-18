@@ -12,17 +12,11 @@ var app = express()
   , server = http.createServer(app)
   , io = socketio.listen(server)
 
+app.set('__dirname', __dirname)
+
 require('./config')(app)
 
-app.use(express.favicon())
-app.use(express.bodyParser())
-app.use(express.methodOverride())
-app.use(app.router)
-app.use(express.static(path.join(__dirname, 'public')))
-
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler())
-}
+require('./app/middleware')(app)
 
 require('./config/routes')(app)
 

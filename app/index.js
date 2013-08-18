@@ -52,6 +52,9 @@ NlexpressGenerator.prototype.app = function app() {
   this.copy('app/controllers/index.js', 'app/controllers/index.js');
   this.copy('app/controllers/root_controller.js', 'app/controllers/root_controller.js');
 
+  this.mkdir('app/middleware');
+  this.copy('app/middleware/index.js', 'app/middleware/index.js');
+
   this.mkdir('public');
   this.mkdir('config');
   this.mkdir('config/environments');
