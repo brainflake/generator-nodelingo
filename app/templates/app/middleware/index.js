@@ -4,6 +4,8 @@ var express = require('express')
 module.exports = function(app) {
   app.use(express.favicon())
   app.use(express.bodyParser())
+  app.use(express.cookieParser())
+  app.use(express.session({secret: 'node rocks'}))
   app.use(express.methodOverride())
   app.use(app.router)
   app.use(express.static(path.join(app.get('__dirname'), 'public')))
