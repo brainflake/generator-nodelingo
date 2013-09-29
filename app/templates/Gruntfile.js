@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {expand: true, cwd: 'components/jquery', src: ['jquery.js'], dest: 'public/javascript', filter: 'isFile'}
+          {expand: true, cwd: 'bower_components/jquery', src: ['jquery.js'], dest: 'public/javascript', filter: 'isFile'}
         ]
       }
     }
