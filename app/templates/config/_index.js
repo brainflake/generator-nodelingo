@@ -1,6 +1,9 @@
 var env = require('./environment')
   , devEnvironment = require('./environments/development')
   , prodEnvironment = require('./environments/production')
+  <% if (handlebars) { %>
+  , hbs = require('hbs')
+  <% } %>
 
 function flattenKeys(obj, keyPrefix) {
   var flattenedObj = {}
@@ -27,6 +30,13 @@ function flattenKeys(obj, keyPrefix) {
 
 module.exports = function(app) {
   app.set('port', process.env.PORT || 3000)
+
+  <% if (handlebars) { %>
+    app.set('views', 'app/views')
+    app.set('view engine', 'hbs')
+
+    hbs.registerPartials(app.get('views') + '/partials')
+  <% } %>
 
   _.each(flattenKeys(env), function(val, key) {
     app.set(key, val)
