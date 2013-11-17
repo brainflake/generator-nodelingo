@@ -57,6 +57,8 @@ NlexpressGenerator.prototype.app = function app() {
   if (this.handlebars) {
     this.mkdir('app/views');
     this.copy('app/views/index.hbs', 'app/views/index.hbs');
+    this.copy('app/views/layout.hbs', 'app/views/layout.hbs');
+    this.template('_bower.json', 'bower.json');
   }
 
   this.mkdir('app/controllers');
@@ -79,7 +81,6 @@ NlexpressGenerator.prototype.app = function app() {
   this.template('_server.js', 'server.js');
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
-  this.template('_bower.json', 'bower.json');
 };
 
 NlexpressGenerator.prototype.projectfiles = function projectfiles() {
