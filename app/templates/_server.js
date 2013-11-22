@@ -24,6 +24,11 @@ require('./config/routes')(app)
 
 require('./app/sockets')(app, io)
 
+process.on('uncaughtException', function(err) {
+  console.log('Received an uncaughtException');
+  console.log(err);
+})
+
 server.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'))
 })
