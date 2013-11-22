@@ -68,6 +68,8 @@ NlexpressGenerator.prototype.app = function app() {
   this.mkdir('app/middleware');
   this.copy('app/middleware/index.js', 'app/middleware/index.js');
 
+  this.copy('app/sockets.js', 'app/sockets.js');
+
   this.mkdir('public');
   this.mkdir('config');
   this.mkdir('config/environments');
