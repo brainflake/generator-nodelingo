@@ -22,6 +22,8 @@ require('./config/routes')(app)
 
 <% if (mongoose) { %>require('./app/models')(app)<% } %>
 
+require('./app/sockets')(app, io)
+
 server.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'))
 })
