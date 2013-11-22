@@ -1,21 +1,24 @@
 {
-  "name": "generator-nlexpress",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "name": "generator-nodelingo",
+  "version": "0.0.1",
+  "description": "A boilerplate for fullstack applications built on node/express using best practices.",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "express",
+    "bootstrap",
+    "mongoose"
   ],
-  "homepage": "https://github.com/brainflake/generator-nlexpress",
-  "bugs": "https://github.com/brainflake/generator-nlexpress/issues",
+  "homepage": "https://github.com/brainflake/generator-nodelingo",
+  "bugs": "https://github.com/brainflake/generator-nodelingo/issues",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Brian Falk",
+    "email": "falk@logicparty.org",
     "url": "https://github.com/brainflake"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/brainflake/generator-nlexpress.git"
+    "url": "git://github.com/brainflake/generator-nodelingo.git"
   },
   "scripts": {
     "test": "mocha"
