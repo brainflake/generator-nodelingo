@@ -1,6 +1,6 @@
 {
   "name": "generator-nodelingo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A boilerplate for fullstack applications built on node/express using best practices.",
   "keywords": [
     "yeoman-generator",
